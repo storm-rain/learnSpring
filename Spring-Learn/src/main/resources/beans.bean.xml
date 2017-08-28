@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+         ">
+
+
+    <bean id="companic" class="soundsystem.SgtPeppers"/>
+    <bean id="cdPlayer" class="soundsystem.CDPlayer">
+        <constructor-arg ref="bankDiscs"/>
+    </bean>
+
+    <bean id="bankDisc" class="soundsystem.BlankDisc">
+        <constructor-arg value="My only love"/>
+        <constructor-arg value="changchen"/>
+    </bean>
+    <bean id="bankDiscs" class="soundsystem.BankActualPalyer">
+        <constructor-arg value="Love"/>
+        <constructor-arg value="zhoujielun"/>
+        <constructor-arg>
+            <set>
+                <ref bean="companic"/>
+                <ref bean="bankDisc"/>
+            </set>
+        </constructor-arg>
+    </bean>
+</beans>
