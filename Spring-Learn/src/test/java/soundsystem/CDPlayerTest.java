@@ -10,8 +10,10 @@ public class CDPlayerTest
     public void cdShouldNotBeNull()
     {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
-      //  ((CompactDisc)ctx.getBean("hahaha")).play();
-       ((MediaPalyer)ctx.getBean("CDPlayer")).play();
+        //  ((CompactDisc)ctx.getBean("hahaha")).play();
+        ((MediaPalyer)ctx.getBean("cdPlayer_Z")).play();
+        ((MediaPalyer)ctx.getBean("otherCdPlayer")).play();
+
 
     }
 }
