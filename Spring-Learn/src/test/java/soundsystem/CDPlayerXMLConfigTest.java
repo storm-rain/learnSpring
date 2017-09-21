@@ -33,4 +33,13 @@ public class CDPlayerXMLConfigTest
         // Assert.assertNotNull(acx.getBean("soundsystem.SgtPeppers#1"));
         ((MediaPalyer) acx.getBean("cdPlayer")).play();
     }
+
+    @Test
+    public void testSetValue()
+    {
+        ApplicationContext acx = new ClassPathXmlApplicationContext("beans.bean.xml");
+        Object o = acx.getBean("cdPlayerSet");
+        Object o1 = acx.getBean("cdPlayerSet");
+        ((MediaPalyer) acx.getBean("cdPlayerSet")).play();
+    }
 }

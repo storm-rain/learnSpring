@@ -16,6 +16,15 @@ public class CDPlayer implements MediaPalyer
         this.cd = cd;
     }
 
+    public CDPlayer()
+    {
+    }
+
+    public void setCd(CompactDisc cd)
+    {
+        this.cd = cd;
+    }
+
     public void play()
     {
         cd.play();

@@ -11,6 +11,10 @@
         <constructor-arg ref="bankDiscs"/>
     </bean>
 
+    <bean id="cdPlayerSet" class="soundsystem.CDPlayer" scope="prototype">
+        <property name="cd" ref="companic"/>
+    </bean>
+
     <bean id="bankDisc" class="soundsystem.BlankDisc">
         <constructor-arg value="My only love"/>
         <constructor-arg value="changchen"/>
